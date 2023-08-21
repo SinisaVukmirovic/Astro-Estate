@@ -1,5 +1,45 @@
 ---
+const navLinks = [
+  {
+    name: 'Home',
+    url: '#home'
+  },
+  {
+    name: 'About',
+    url: '#about'
+  },
+  {
+    name: 'Service',
+    url: '#service'
+  },
+  {
+    name: 'Property',
+    url: '#property'
+  },
+  {
+    name: 'Blog',
+    url: '#blog'
+  },
+  {
+    name: 'Contact',
+    url: '#contact'
+  }
+];
 
+const socialLinks = [
+  {
+    name: 'logo-facebook'
+  },
+  {
+    name: 'logo-twitter'
+  },
+  {
+    name: 'logo-instagram'
+  },
+  {
+    name: 'logo-pinterest'
+  }
+];
 ---
 
 <header class="header" data-header>
@@ -31,8 +71,15 @@
 
         <div class="wrapper">
           <ul class="header-top-social-list">
+            {socialLinks.map(link => (
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name={link.name}></ion-icon>
+                </a>
+              </li>
+            ))}
 
-            <li>
+            <!-- <li>
               <a href="#" class="header-top-social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
@@ -54,7 +101,7 @@
               <a href="#" class="header-top-social-link">
                 <ion-icon name="logo-pinterest"></ion-icon>
               </a>
-            </li>
+            </li> -->
 
           </ul>
 
@@ -87,8 +134,13 @@
 
           <div class="navbar-bottom">
             <ul class="navbar-list">
+              {navLinks.map(link => (
+                <li>
+                  <a href={link.url} class="navbar-link" data-nav-link>{link.name}</a>
+                </li>
+              ))}
 
-              <li>
+              <!-- <li>
                 <a href="#home" class="navbar-link" data-nav-link>Home</a>
               </li>
 
@@ -110,7 +162,7 @@
 
               <li>
                 <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-              </li>
+              </li> -->
 
             </ul>
           </div>
