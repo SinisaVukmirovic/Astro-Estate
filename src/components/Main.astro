@@ -1,3 +1,7 @@
+---
+import Service from "./services/Service.astro";
+---
+
 <main>
   <article>
     <!-- 
@@ -109,8 +113,9 @@
     <!-- 
         - #SERVICE
       -->
+      <Service />
 
-    <section class="service" id="service">
+    <!-- <section class="service" id="service">
       <div class="container">
         <p class="section-subtitle">Our Services</p>
 
@@ -187,7 +192,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- 
         - #PROPERTY
@@ -1095,7 +1100,7 @@
   #SERVICE
 \*-----------------------------------*/
 
-.service {
+/* .service {
   background: var(--cultured-2);
   padding-block: var(--section-padding);
 }
@@ -1105,9 +1110,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-}
+} */
 
-.service-card {
+/* .service-card {
   position: relative;
   background: var(--white);
   text-align: center;
@@ -1155,7 +1160,7 @@
   transition: var(--transition);
 }
 
-.service-card:is(:hover, :focus)::after { width: 100%; }
+.service-card:is(:hover, :focus)::after { width: 100%; } */
 
 
 
@@ -1555,7 +1560,7 @@
    * SERVICE
    */
 
-   .service-list > li { width: calc(50% - 15px); }
+   /* .service-list > li { width: calc(50% - 15px); } */
 
 
 
@@ -1680,7 +1685,7 @@
    * SERVICE
    */
 
-  .service-list > li { width: calc(33.33% - 20px); }
+  /* .service-list > li { width: calc(33.33% - 20px); } */
 
 
 
