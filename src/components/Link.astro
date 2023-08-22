@@ -1,0 +1,54 @@
+---
+const navLinks = [
+  {
+    name: 'Home',
+    url: '#home'
+  },
+  {
+    name: 'About',
+    url: '#about'
+  },
+  {
+    name: 'Service',
+    url: '#service'
+  },
+  {
+    name: 'Property',
+    url: '#property'
+  },
+  {
+    name: 'Blog',
+    url: '#blog'
+  },
+  {
+    name: 'Contact',
+    url: '#contact'
+  }
+];
+---
+
+{navLinks.map(link => (
+<li>
+    <a href={link.url} class="navbar-link" data-nav-link>{link.name}</a>
+</li>
+))}
+
+<style>
+    .navbar-link {
+        color: var(--cadet);
+        font-size: var(--fs-5);
+        font-weight: var(--fw-600);
+        text-transform: uppercase;
+        padding-block: 15px;
+        }
+
+    .navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+    @media (min-width: 1200px) {
+        .navbar-link {
+            color: var(--dark-jungle-green);
+            --fs-5: 1.125rem;
+            text-transform: capitalize;
+        }
+    }
+</style>

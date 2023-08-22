@@ -1,45 +1,47 @@
 ---
-const navLinks = [
-  {
-    name: 'Home',
-    url: '#home'
-  },
-  {
-    name: 'About',
-    url: '#about'
-  },
-  {
-    name: 'Service',
-    url: '#service'
-  },
-  {
-    name: 'Property',
-    url: '#property'
-  },
-  {
-    name: 'Blog',
-    url: '#blog'
-  },
-  {
-    name: 'Contact',
-    url: '#contact'
-  }
-];
+import Link from './Link.astro';
+import SocialLink from './SocialLink.astro';
+// const navLinks = [
+//   {
+//     name: 'Home',
+//     url: '#home'
+//   },
+//   {
+//     name: 'About',
+//     url: '#about'
+//   },
+//   {
+//     name: 'Service',
+//     url: '#service'
+//   },
+//   {
+//     name: 'Property',
+//     url: '#property'
+//   },
+//   {
+//     name: 'Blog',
+//     url: '#blog'
+//   },
+//   {
+//     name: 'Contact',
+//     url: '#contact'
+//   }
+// ];
 
-const socialLinks = [
-  {
-    name: 'logo-facebook'
-  },
-  {
-    name: 'logo-twitter'
-  },
-  {
-    name: 'logo-instagram'
-  },
-  {
-    name: 'logo-pinterest'
-  }
-];
+// const socialLinks = [
+//   {
+//     name: 'logo-facebook'
+//   },
+//   {
+//     name: 'logo-twitter'
+//   },
+//   {
+//     name: 'logo-instagram'
+//   },
+//   {
+//     name: 'logo-pinterest'
+//   }
+// ];
 ---
 
 <header class="header" data-header>
@@ -71,13 +73,14 @@ const socialLinks = [
 
         <div class="wrapper">
           <ul class="header-top-social-list">
-            {socialLinks.map(link => (
+            <SocialLink />
+            <!-- {socialLinks.map(link => (
               <li>
                 <a href="#" class="header-top-social-link">
                   <ion-icon name={link.name}></ion-icon>
                 </a>
               </li>
-            ))}
+            ))} -->
 
             <!-- <li>
               <a href="#" class="header-top-social-link">
@@ -134,11 +137,12 @@ const socialLinks = [
 
           <div class="navbar-bottom">
             <ul class="navbar-list">
-              {navLinks.map(link => (
+              <Link />
+              <!-- {navLinks.map(link => (
                 <li>
                   <a href={link.url} class="navbar-link" data-nav-link>{link.name}</a>
                 </li>
-              ))}
+              ))} -->
 
               <!-- <li>
                 <a href="#home" class="navbar-link" data-nav-link>Home</a>
@@ -257,10 +261,10 @@ const socialLinks = [
 
 .header-top-social-list { gap: 8px; }
 
-.header-top-social-link {
+/* .header-top-social-link {
   color: var(--white);
   font-size: 15px;
-}
+} */
 
 .header-top-btn {
   background: var(--orange-soda);
@@ -317,7 +321,7 @@ const socialLinks = [
   padding: 5px;
 }
 
-.navbar-link {
+/* .navbar-link {
   color: var(--cadet);
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
@@ -325,7 +329,7 @@ const socialLinks = [
   padding-block: 15px;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); } */
 
 .overlay {
   position: fixed;
@@ -386,7 +390,7 @@ const socialLinks = [
 
 .header-top-social-list { gap: 12px; }
 
-.header-top-social-link { font-size: 1rem; }
+/* .header-top-social-link { font-size: 1rem; } */
 
 .header-top-btn { padding: 10px 20px; }
 
@@ -447,11 +451,11 @@ const socialLinks = [
   gap: 30px;
 }
 
-.navbar-link {
+/* .navbar-link {
   color: var(--dark-jungle-green);
   --fs-5: 1.125rem;
   text-transform: capitalize;
-}
+} */
 
 .header { padding-bottom: 114px; }
 

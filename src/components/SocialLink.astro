@@ -1,0 +1,35 @@
+---
+const socialLinks = [
+  {
+    name: 'logo-facebook'
+  },
+  {
+    name: 'logo-twitter'
+  },
+  {
+    name: 'logo-instagram'
+  },
+  {
+    name: 'logo-pinterest'
+  }
+];
+---
+
+{socialLinks.map(link => (
+    <li>
+      <a href="#" class="header-top-social-link">
+        <ion-icon name={link.name}></ion-icon>
+      </a>
+    </li>
+))}
+
+<style>
+    .header-top-social-link {
+        color: var(--white);
+        font-size: 15px;
+    }
+
+    @media (min-width: 768px) {
+        .header-top-social-link { font-size: 1rem; }
+    }
+</style>
