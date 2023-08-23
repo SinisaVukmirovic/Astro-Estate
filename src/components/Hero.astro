@@ -1,0 +1,77 @@
+---
+import heroImg from '/imgs/hero-banner.png';
+---
+
+<section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-subtitle">
+          <ion-icon name="home"></ion-icon>
+
+          <span>Real Estate Agency</span>
+        </p>
+
+        <h2 class="h1 hero-title">Find Your Dream House By Us</h2>
+
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore.
+        </p>
+
+        <button class="btn">Make An Enquiry</button>
+      </div>
+
+      <figure class="hero-banner">
+        <img
+          src={heroImg}
+          alt="Modern house model"
+          class="w-100"
+        />
+      </figure>
+    </div>
+  </section>
+
+  <style>
+.hero {
+  background: var(--cultured-2);
+  padding-block: var(--section-padding);
+}
+
+.hero-content { margin-bottom: 60px; }
+
+.hero-subtitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle ion-icon { color: var(--orange-soda); }
+
+.hero-subtitle span {
+  color: var(--dark-jungle-green);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+}
+
+.hero-title { margin-bottom: 20px; }
+
+.hero-text {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  line-height: 1.8;
+  padding-left: 15px;
+  border-left: 1px solid;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+  </style>

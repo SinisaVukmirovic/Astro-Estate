@@ -1,0 +1,123 @@
+---
+import Link from './Link.astro';
+
+import logoImg from '/imgs/logo.png';
+
+---
+
+<nav class="navbar" data-navbar>
+
+    <div class="navbar-top">
+
+      <a href="#" class="logo">
+          <img src={logoImg} alt="Homeverse logo">
+      </a>
+
+      <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+    </div>
+
+    <div class="navbar-bottom">
+      <ul class="navbar-list">
+        <Link />
+        <!-- {navLinks.map(link => (
+          <li>
+            <a href={link.url} class="navbar-link" data-nav-link>{link.name}</a>
+          </li>
+        ))} -->
+
+        <!-- <li>
+          <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#about" class="navbar-link" data-nav-link>About</a>
+        </li>
+
+        <li>
+          <a href="#service" class="navbar-link" data-nav-link>Service</a>
+        </li>
+
+        <li>
+          <a href="#property" class="navbar-link" data-nav-link>Property</a>
+        </li>
+
+        <li>
+          <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+        </li> -->
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <style>
+.navbar {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  left: -310px;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
+  z-index: 5;
+  padding: 60px 20px;
+  visibility: hidden;
+  transition: 0.15s ease-in;
+}
+
+.navbar.active {
+  visibility: visible;
+  transform: translateX(310px);
+  transition: 0.25s ease-out;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--cultured-1);
+  margin-bottom: 25px;
+}
+
+.navbar-top .logo img { width: 200px; }
+
+.nav-close-btn ion-icon {
+  font-size: 20px;
+  --ionicon-stroke-width: 45px;
+  padding: 5px;
+}
+
+/* .navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+} */
+
+@media (min-width: 1200px) {
+/**
+   * HEADER
+   */
+
+.navbar-top { display: none; }
+
+.navbar,
+.navbar.active { all: unset; }
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+}
+
+  </style>

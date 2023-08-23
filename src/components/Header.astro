@@ -1,6 +1,10 @@
 ---
-import Link from './Link.astro';
-import SocialLink from './SocialLink.astro';
+import HeaderTop from './header-elements/HeaderTop.astro';
+// import Nav from './header-elements/Nav.astro';
+import Nav from './header-elements/Nav.astro';
+
+import logoImg from '/imgs/logo.png';
+// import SocialLink from './SocialLink.astro';
 // const navLinks = [
 //   {
 //     name: 'Home',
@@ -48,130 +52,16 @@ import SocialLink from './SocialLink.astro';
 
     <div class="overlay" data-overlay></div>
 
-    <div class="header-top">
-      <div class="container">
-
-        <ul class="header-top-list">
-
-          <li>
-            <a href="mailto:info@homeverse.com" class="header-top-link">
-              <ion-icon name="mail-outline"></ion-icon>
-
-              <span>info@homeverse.com</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="header-top-link">
-              <ion-icon name="location-outline"></ion-icon>
-
-              <address>15/A, Nest Tower, NYC</address>
-            </a>
-          </li>
-
-        </ul>
-
-        <div class="wrapper">
-          <ul class="header-top-social-list">
-            <SocialLink />
-            <!-- {socialLinks.map(link => (
-              <li>
-                <a href="#" class="header-top-social-link">
-                  <ion-icon name={link.name}></ion-icon>
-                </a>
-              </li>
-            ))} -->
-
-            <!-- <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li> -->
-
-          </ul>
-
-          <button class="header-top-btn">Add Listing</button>
-        </div>
-
-      </div>
-    </div>
+    <HeaderTop />
 
     <div class="header-bottom">
       <div class="container">
 
         <a href="#" class="logo">
-          <img src="/imgs/logo.png" alt="Homeverse logo">
+          <img src={logoImg} alt="Homeverse logo">
         </a>
 
-        <nav class="navbar" data-navbar>
-
-          <div class="navbar-top">
-
-            <a href="#" class="logo">
-                <img src="/imgs/logo.png" alt="Homeverse logo">
-            </a>
-
-            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-          </div>
-
-          <div class="navbar-bottom">
-            <ul class="navbar-list">
-              <Link />
-              <!-- {navLinks.map(link => (
-                <li>
-                  <a href={link.url} class="navbar-link" data-nav-link>{link.name}</a>
-                </li>
-              ))} -->
-
-              <!-- <li>
-                <a href="#home" class="navbar-link" data-nav-link>Home</a>
-              </li>
-
-              <li>
-                <a href="#about" class="navbar-link" data-nav-link>About</a>
-              </li>
-
-              <li>
-                <a href="#service" class="navbar-link" data-nav-link>Service</a>
-              </li>
-
-              <li>
-                <a href="#property" class="navbar-link" data-nav-link>Property</a>
-              </li>
-
-              <li>
-                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-              </li>
-
-              <li>
-                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-              </li> -->
-
-            </ul>
-          </div>
-
-        </nav>
+        <Nav />
 
         <div class="header-bottom-actions">
 
@@ -216,65 +106,7 @@ import SocialLink from './SocialLink.astro';
   z-index: 2;
 }
 
-.header-top {
-  background: var(--prussian-blue);
-  padding-block: 15px;
-}
 
-.header-top .container,
-.header-top-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-top .container { gap: 8px 20px; }
-
-.header-top-list { gap: 15px; }
-
-.header-top-link {
-  color: var(--white);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-700);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
-
-.header-top-link ion-icon {
-  color: var(--orange-soda);
-  font-size: 15px;
-  --ionicon-stroke-width: 60px;
-}
-
-.header-top .wrapper,
-.header-top-social-list {
-  display: flex;
-  align-items: center;
-}
-
-.header-top .wrapper { gap: 20px; }
-
-.header-top-social-list { gap: 8px; }
-
-/* .header-top-social-link {
-  color: var(--white);
-  font-size: 15px;
-} */
-
-.header-top-btn {
-  background: var(--orange-soda);
-  color: var(--white);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-700);
-  padding: 4px 15px;
-}
-
-.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
 
 .header-bottom {
   background: var(--white);
@@ -283,7 +115,7 @@ import SocialLink from './SocialLink.astro';
 
 .header-bottom .logo img { margin-inline: auto; }
 
-.navbar {
+/* .navbar {
   background: var(--white);
   position: fixed;
   top: 0;
@@ -296,15 +128,15 @@ import SocialLink from './SocialLink.astro';
   padding: 60px 20px;
   visibility: hidden;
   transition: 0.15s ease-in;
-}
+} */
 
-.navbar.active {
+/* .navbar.active {
   visibility: visible;
   transform: translateX(310px);
   transition: 0.25s ease-out;
-}
+} */
 
-.navbar-top {
+/* .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,13 +145,13 @@ import SocialLink from './SocialLink.astro';
   margin-bottom: 25px;
 }
 
-.navbar-top .logo img { width: 200px; }
+.navbar-top .logo img { width: 200px; } */
 
-.nav-close-btn ion-icon {
+/* .nav-close-btn ion-icon {
   font-size: 20px;
   --ionicon-stroke-width: 45px;
   padding: 5px;
-}
+} */
 
 /* .navbar-link {
   color: var(--cadet);
@@ -384,15 +216,15 @@ import SocialLink from './SocialLink.astro';
    * HEADER
    */
 
-   .header-top { padding-block: 5px; }
+   /* .header-top { padding-block: 5px; }
 
 .header-top .wrapper { margin-left: auto; }
 
-.header-top-social-list { gap: 12px; }
+.header-top-social-list { gap: 12px; } */
 
 /* .header-top-social-link { font-size: 1rem; } */
 
-.header-top-btn { padding: 10px 20px; }
+/* .header-top-btn { padding: 10px 20px; } */
 
 .header-bottom-actions {
   all: unset;
@@ -425,8 +257,8 @@ import SocialLink from './SocialLink.astro';
    * HEADER
    */
 
-  .header-top-list,
-  .header-top .wrapper { gap: 30px; }
+  /* .header-top-list,
+  .header-top .wrapper { gap: 30px; } */
 
 }
 
@@ -439,17 +271,17 @@ import SocialLink from './SocialLink.astro';
    .header-bottom { padding-block: 30px; }
 
 .header-bottom-actions-btn:last-child,
-.navbar-top,
+/* .navbar-top, */
 .overlay { display: none; }
 
-.navbar,
-.navbar.active { all: unset; }
+/* .navbar,
+.navbar.active { all: unset; } */
 
-.navbar-list {
+/* .navbar-list {
   display: flex;
   align-items: center;
   gap: 30px;
-}
+} */
 
 /* .navbar-link {
   color: var(--dark-jungle-green);

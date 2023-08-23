@@ -1,0 +1,159 @@
+---
+import SocialLink from './SocialLink.astro';
+
+---
+
+<div class="header-top">
+    <div class="container">
+
+      <ul class="header-top-list">
+
+        <li>
+          <a href="mailto:info@homeverse.com" class="header-top-link">
+            <ion-icon name="mail-outline"></ion-icon>
+
+            <span>info@homeverse.com</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="header-top-link">
+            <ion-icon name="location-outline"></ion-icon>
+
+            <address>15/A, Nest Tower, NYC</address>
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="wrapper">
+        <ul class="header-top-social-list">
+          <SocialLink />
+          <!-- {socialLinks.map(link => (
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name={link.name}></ion-icon>
+              </a>
+            </li>
+          ))} -->
+
+          <!-- <li>
+            <a href="#" class="header-top-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+        <button class="header-top-btn">Add Listing</button>
+      </div>
+
+    </div>
+</div>
+
+<style>
+    .header-top {
+  background: var(--prussian-blue);
+  padding-block: 15px;
+}
+
+.header-top .container,
+.header-top-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-top .container { gap: 8px 20px; }
+
+.header-top-list { gap: 15px; }
+
+.header-top-link {
+  color: var(--white);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-link ion-icon {
+  color: var(--orange-soda);
+  font-size: 15px;
+  --ionicon-stroke-width: 60px;
+}
+
+.header-top .wrapper,
+.header-top-social-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-top .wrapper { gap: 20px; }
+
+.header-top-social-list { gap: 8px; }
+
+/* .header-top-social-link {
+  color: var(--white);
+  font-size: 15px;
+} */
+
+.header-top-btn {
+  background: var(--orange-soda);
+  color: var(--white);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  padding: 4px 15px;
+}
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+/**
+   * HEADER
+   */
+
+   .header-top { padding-block: 5px; }
+
+.header-top .wrapper { margin-left: auto; }
+
+.header-top-social-list { gap: 12px; }
+
+/* .header-top-social-link { font-size: 1rem; } */
+
+.header-top-btn { padding: 10px 20px; }
+}
+
+@media (min-width: 992px) {
+    /**
+   * HEADER
+   */
+
+  .header-top-list,
+  .header-top .wrapper { gap: 30px; }
+
+}
+</style>
