@@ -310,6 +310,9 @@ a {
       max-width: 550px;
       margin-inline: auto;
     }
+    .container {
+        padding-inline: 15px;
+    }
   
     .has-scrollbar {
       gap: 25px;

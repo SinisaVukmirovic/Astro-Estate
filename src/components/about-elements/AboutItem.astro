@@ -1,0 +1,59 @@
+---
+const aboutItem = [
+    {
+        icon: 'home-outline',
+        text: 'Smart Home Design'
+    },
+    {
+        icon: 'leaf-outline',
+        text: 'Beautiful Scene Around'
+    },
+    {
+        icon: 'wine-outline',
+        text: 'Exceptional Lifestyle'
+    },
+    {
+        icon: 'shield-checkmark-outline',
+        text: 'Complete 24/7 Security'
+    }
+]
+---
+
+{aboutItem.map(item => (
+    <li class="about-item">
+        <div class="about-item-icon">
+        <ion-icon name={item.icon}></ion-icon>
+        </div>
+
+        <p class="about-item-text">{item.text}</p>
+    </li>
+))};
+
+<style>
+    .about-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.about-item-icon {
+  background: var(--misty-rose);
+  height: 45px;
+  min-width: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.about-item-icon ion-icon {
+  color: var(--orange-soda);
+  font-size: 18px;
+}
+
+.about-item-text {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+}
+</style>

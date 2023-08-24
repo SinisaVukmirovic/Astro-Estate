@@ -1,6 +1,7 @@
 ---
 import Service from "./services/Service.astro";
 import Hero from "./Hero.astro";
+import About from "./About.astro";
 ---
 
 <main>
@@ -44,74 +45,10 @@ import Hero from "./Hero.astro";
         - #ABOUT
       -->
 
-    <section class="about" id="about">
-      <div class="container">
-        <figure class="about-banner">
-          <img src="./imgs/about-banner-1.png" alt="House interior" />
+      
+      <About />
+<!-- AOBUT CODE GOES HERE -->
 
-          <img
-            src="./imgs/about-banner-2.jpg"
-            alt="House interior"
-            class="abs-img"
-          />
-        </figure>
-
-        <div class="about-content">
-          <p class="section-subtitle">About Us</p>
-
-          <h2 class="h2 section-title">
-            The Leading Real Estate Rental Marketplace.
-          </h2>
-
-          <p class="about-text">
-            Over 39,000 people work for us in more than 70 countries all over
-            the This breadth of global coverage, combined with specialist
-            services
-          </p>
-
-          <ul class="about-list">
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Smart Home Design</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="leaf-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Beautiful Scene Around</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="wine-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Exceptional Lifestyle</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="shield-checkmark-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Complete 24/7 Security</p>
-            </li>
-          </ul>
-
-          <p class="callout">
-            "Enimad minim veniam quis nostrud exercitation llamco laboris. Lorem
-            ipsum dolor sit amet"
-          </p>
-
-          <a href="#service" class="btn">Our Services</a>
-        </div>
-      </div>
-    </section>
 
     <!-- 
         - #SERVICE
@@ -1016,7 +953,7 @@ import Hero from "./Hero.astro";
   #ABOUT
 \*-----------------------------------*/
 
-.about { padding-block: var(--section-padding); }
+/* .about { padding-block: var(--section-padding); }
 
 .about-banner {
   position: relative;
@@ -1050,17 +987,17 @@ import Hero from "./Hero.astro";
   margin-bottom: 30px;
 }
 
-.about-list { margin-bottom: 30px; }
+.about-list { margin-bottom: 30px; } */
 
-.about-item {
+/* .about-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
-}
+} */
 
-.about-item-icon {
+/* .about-item-icon {
   background: var(--misty-rose);
   height: 45px;
   min-width: 45px;
@@ -1072,14 +1009,14 @@ import Hero from "./Hero.astro";
 .about-item-icon ion-icon {
   color: var(--orange-soda);
   font-size: 18px;
-}
+} */
 
-.about-item-text {
+/* .about-item-text {
   color: var(--cadet);
   font-size: var(--fs-5);
-}
+} */
 
-.about .callout {
+/* .about .callout {
   background: hsla(7, 78%, 53%, 0.05);
   color: var(--cadet);
   font-size: var(--fs-5);
@@ -1093,7 +1030,7 @@ import Hero from "./Hero.astro";
 .about .btn {
   max-width: max-content;
   --text-transform: uppercase;
-}
+} */
 
 
 
@@ -1671,7 +1608,7 @@ import Hero from "./Hero.astro";
    * ABOUT
    */
 
-  .about .container {
+  /* .about .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1680,7 +1617,7 @@ import Hero from "./Hero.astro";
 
   .about-banner { margin-bottom: 0; }
 
-  .about-banner > img { width: 100%; }
+  .about-banner > img { width: 100%; } */
 
 
 

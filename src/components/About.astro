@@ -1,0 +1,161 @@
+---
+import aboutImgBanner1 from '/imgs/about-banner-1.png';
+import aboutImgBanner2 from '/imgs/about-banner-2.jpg';
+
+import AboutItem from './about-elements/AboutItem.astro';
+---
+
+<section class="about" id="about">
+    <div class="container">
+      <figure class="about-banner">
+        <img src={aboutImgBanner1} alt="House interior" />
+
+        <img
+          src={aboutImgBanner2}
+          alt="House interior"
+          class="abs-img"
+        />
+      </figure>
+
+      <div class="about-content">
+        <p class="section-subtitle">About Us</p>
+
+        <h2 class="h2 section-title">
+          The Leading Real Estate Rental Marketplace.
+        </h2>
+
+        <p class="about-text">
+          Over 39,000 people work for us in more than 70 countries all over
+          the This breadth of global coverage, combined with specialist
+          services
+        </p>
+
+        <ul class="about-list">
+
+            <AboutItem />
+
+          <!-- <li class="about-item">
+            <div class="about-item-icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </div>
+
+            <p class="about-item-text">Smart Home Design</p>
+          </li>
+
+          <li class="about-item">
+            <div class="about-item-icon">
+              <ion-icon name="leaf-outline"></ion-icon>
+            </div>
+
+            <p class="about-item-text">Beautiful Scene Around</p>
+          </li>
+
+          <li class="about-item">
+            <div class="about-item-icon">
+              <ion-icon name="wine-outline"></ion-icon>
+            </div>
+
+            <p class="about-item-text">Exceptional Lifestyle</p>
+          </li>
+
+          <li class="about-item">
+            <div class="about-item-icon">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </div>
+
+            <p class="about-item-text">Complete 24/7 Security</p>
+          </li> -->
+        </ul>
+
+        <p class="callout">
+          "Enimad minim veniam quis nostrud exercitation llamco laboris. Lorem
+          ipsum dolor sit amet"
+        </p>
+
+        <a href="#service" class="btn">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about { padding-block: var(--section-padding); }
+
+.about-banner {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.about-banner > img {
+  max-width: max-content;
+  width: 100%;
+}
+
+.about-banner .abs-img {
+  position: absolute;
+  bottom: 100px;
+  left: 15px;
+  width: 50%;
+  border-radius: 4px;
+}
+
+.about .section-subtitle { margin-inline: 0; }
+
+.about .section-title {
+  --text-align: left;
+  --margin-bottom: 15px;
+}
+
+.about-text {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.about-list { margin-bottom: 30px; }
+
+.about .callout {
+  background: hsla(7, 78%, 53%, 0.05);
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+  padding: 20px 25px;
+  border-left: 4px solid var(--orange-soda);
+  margin-bottom: 40px;
+}
+
+.about .btn {
+  max-width: max-content;
+  --text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+.about .section-title { max-width: 30ch; }
+
+.about-text { max-width: 55ch }
+
+.about-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (min-width: 992px) {
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .about-banner { margin-bottom: 0; }
+
+  .about-banner > img { width: 100%; }
+}
+  </style>
