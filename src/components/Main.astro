@@ -2,6 +2,7 @@
 import Service from "./services/Service.astro";
 import Hero from "./Hero.astro";
 import About from "./About.astro";
+import Features from "./Features.astro";
 ---
 
 <main>
@@ -596,131 +597,15 @@ import About from "./About.astro";
         - #FEATURES
       -->
 
-    <section class="features">
-      <div class="container">
-        <p class="section-subtitle">Our Aminities</p>
 
-        <h2 class="h2 section-title">Building Aminities</h2>
+      <Features />
+    <!-- FEATURES SECTION CODE GOES HERE -->
 
-        <ul class="features-list">
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="car-sport-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Parking Space</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="water-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Swimming Pool</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="shield-checkmark-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Private Security</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="fitness-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Medical Center</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="library-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Library Area</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="bed-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">King Size Beds</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Smart Homes</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="features-card">
-              <div class="card-icon">
-                <ion-icon name="football-outline"></ion-icon>
-              </div>
-
-              <h3 class="card-title">Kid’s Playland</h3>
-
-              <div class="card-btn">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
 
     <!-- 
         - #BLOG
       -->
+
 
     <section class="blog" id="blog">
       <div class="container">
@@ -1294,7 +1179,7 @@ import About from "./About.astro";
   #FEATURES
 \*-----------------------------------*/
 
-.features {
+/* .features {
   background: var(--cultured-2);
   padding-block: var(--section-padding);
 }
@@ -1306,9 +1191,9 @@ import About from "./About.astro";
   gap: 50px 20px;
 }
 
-.features-list > li { width: calc(50% - 10px); }
+.features-list > li { width: calc(50% - 10px); } */
 
-.features-card {
+/* .features-card {
   position: relative;
   background: var(--white);
   padding: 40px 15px;
@@ -1365,7 +1250,7 @@ import About from "./About.astro";
   transition: var(--transition);
 }
 
-.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); } */
 
 
 
@@ -1552,17 +1437,9 @@ import About from "./About.astro";
  * FEATURES
  */
 
- .features-list > li { width: calc(33.33% - 13.33px); }
+ /* .features-list > li { width: calc(33.33% - 13.33px); } */
 
-.features-card { gap: 20px; }
 
-.features-card .card-icon {
-  width: 80px;
-  height: 80px;
-  font-size: 32px;
-}
-
-.features-card .card-title { --fs-6: 1.125rem; }
 
 
 
@@ -1643,9 +1520,9 @@ import About from "./About.astro";
    * FEATURES
    */
 
-  .features-list { column-gap: 30px; }
+  /* .features-list { column-gap: 30px; } */
 
-  .features-list > li { width: calc(25% - 30px); }
+  /* .features-list > li { width: calc(25% - 30px); } */
 
 
 
@@ -1743,13 +1620,13 @@ import About from "./About.astro";
  * FEATURES
  */
 
-.features-card .card-icon {
+/* .features-card .card-icon {
   width: 100px;
   height: 100px;
   font-size: 45px;
 }
 
-.features-card .card-title { --fs-6: 1.375rem; }
+.features-card .card-title { --fs-6: 1.375rem; } */
 
 
 
