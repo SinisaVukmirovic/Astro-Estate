@@ -1,0 +1,147 @@
+---
+const blogCards = [
+    {
+        src: './imgs/blog-1.png',
+        byWho: 'John',
+        type: 'Interior',
+        title: 'The Most Inspiring Interior Design Of 2021',
+        date: 'jun 07, 2022'
+    },
+    {
+        src: './imgs/blog-2.jpg',
+        byWho: 'Becky',
+        type: 'Estate',
+        title: 'Recent Commercial Real Estate Transactions',
+        date: 'Apr 27, 2022'
+    },
+    {
+        src: './imgs/blog-3.jpg',
+        byWho: 'Sam',
+        type: 'Room',
+        title: 'Renovating a Living Room? Experts Share Their Secrets',
+        date: 'Sep 15, 2022'
+    }
+]
+---
+
+{blogCards.map(card => (
+    <li>
+        <div class="blog-card">
+          <figure class="card-banner">
+            <img
+              src={card.src}
+              alt="Picture of room and intetior"
+              class="w-100"
+            />
+          </figure>
+    
+          <div class="blog-content">
+            <div class="blog-content-top">
+              <ul class="card-meta-list">
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="person"></ion-icon>
+    
+                    <span>by: {card.byWho}</span>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="pricetags"></ion-icon>
+    
+                    <span>{card.type}</span>
+                  </a>
+                </li>
+              </ul>
+    
+              <h3 class="h3 blog-title">
+                <a href="#">{card.title}</a>
+              </h3>
+            </div>
+    
+            <div class="blog-content-bottom">
+              <div class="publish-date">
+                <ion-icon name="calendar"></ion-icon>
+    
+                <time datetime={card.date}>{card.date}</time>
+              </div>
+    
+              <a href="#" class="read-more-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+      </li>
+))}
+
+<style>
+    .blog-card { box-shadow: var(--shadow-2); }
+
+    .blog-card .card-banner {
+  overflow: hidden;
+  aspect-ratio: 2 / 1.5;
+}
+
+.blog-card .card-banner img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-content { padding: 30px; }
+
+.blog-card .card-meta-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.blog-card :is(.card-meta-link, .publish-date) {
+  color: var(--cadet);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-title {
+  font-size: 1rem;
+  --font-weight: var(--fw-600);
+}
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-content-bottom {
+  padding-top: 20px;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.1);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-card .read-more-btn {
+  color: var(--orange-soda);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) { 
+
+.blog-card { --fs-7: 0.875rem; }
+
+.blog-title { font-size: 1.25rem; }
+
+.blog .card-meta-list { gap: 30px; }
+}
+</style>
