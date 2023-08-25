@@ -5,6 +5,7 @@ import About from "./About.astro";
 import Features from "./Features.astro";
 import Blog from "./Blog.astro";
 import Cta from "./Cta.astro";
+import Property from './Property.astro';
 ---
 
 <main>
@@ -141,7 +142,9 @@ import Cta from "./Cta.astro";
         - #PROPERTY
       -->
 
-    <section class="property" id="property">
+      <Property />
+
+    <!-- <section class="property" id="property">
       <div class="container">
         <p class="section-subtitle">Properties</p>
 
@@ -593,7 +596,7 @@ import Cta from "./Cta.astro";
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- 
         - #FEATURES
@@ -999,7 +1002,7 @@ import Cta from "./Cta.astro";
   #PROPERTY
 \*-----------------------------------*/
 
-.property { padding-block: var(--section-padding); }
+/* .property { padding-block: var(--section-padding); }
 
 .property-card {
   border: 1px solid var(--alice-blue);
@@ -1173,7 +1176,7 @@ import Cta from "./Cta.astro";
 .card-footer-actions-btn:is(:hover, :focus) {
   background: var(--orange-soda);
   color: var(--white);
-}
+} */
 
 
 
