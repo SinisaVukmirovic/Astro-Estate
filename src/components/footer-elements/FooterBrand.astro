@@ -1,0 +1,116 @@
+---
+import logoImg from '/imgs/logo-light.png';
+
+import SocialList from './SocialList.astro';
+---
+
+<div class="footer-brand">
+    <a href="#" class="logo">
+      <img src="./imgs/logo-light.png" alt="Homeverse logo" />
+    </a>
+
+    <p class="section-text">
+      Lorem Ipsum is simply dummy text of the and typesetting industry.
+      Lorem Ipsum is dummy text of the printing.
+    </p>
+
+    <ul class="contact-list">
+      <li>
+        <a href="#" class="contact-link">
+          <ion-icon name="location-outline"></ion-icon>
+
+          <address>Brooklyn, New York, United States</address>
+        </a>
+      </li>
+
+      <li>
+        <a href="tel:+0123456789" class="contact-link">
+          <ion-icon name="call-outline"></ion-icon>
+
+          <span>+0123-456789</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="mailto:contact@homeverse.com" class="contact-link">
+          <ion-icon name="mail-outline"></ion-icon>
+
+          <span>contact@homeverse.com</span>
+        </a>
+      </li>
+    </ul>
+
+    <SocialList />
+    <!-- <ul class="social-list">
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </li>
+    </ul> -->
+  </div>
+
+<style>
+.footer-brand { margin-bottom: 70px; }
+
+.footer-brand .logo { margin-bottom: 15px; }
+
+.section-text {
+  font-size: var(--fs-5);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 45ch;
+}
+
+.contact-list {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-link ion-icon { font-size: 18px; }
+
+.contact-link :is(address, span) {
+  font-size: var(--fs-5);
+  transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: 992px) {
+
+
+  .footer-brand {
+    max-width: 300px;
+    margin-bottom: 0;
+  }
+</style>

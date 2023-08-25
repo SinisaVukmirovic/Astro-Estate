@@ -1,13 +1,14 @@
 ---
+import FooterBrand from './footer-elements/FooterBrand.astro';
+import LinkBox from './footer-elements/LinkBox.astro';
 ---
 
-<!-- 
-    - #FOOTER
-  -->
 <footer class="footer">
   <div class="footer-top">
     <div class="container">
-      <div class="footer-brand">
+
+      <FooterBrand />
+      <!-- <div class="footer-brand">
         <a href="#" class="logo">
           <img src="./imgs/logo-light.png" alt="Homeverse logo" />
         </a>
@@ -68,9 +69,11 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
-      <div class="footer-link-box">
+
+      <LinkBox />
+      <!-- <div class="footer-link-box">
         <ul class="footer-list">
           <li>
             <p class="footer-list-title">Company</p>
@@ -160,7 +163,7 @@
             <a href="#" class="footer-link">Contact us</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -193,11 +196,11 @@
   padding-bottom: 40px;
 }
 
-.footer-brand { margin-bottom: 70px; }
+/* .footer-brand { margin-bottom: 70px; }
 
-.footer-brand .logo { margin-bottom: 15px; }
+.footer-brand .logo { margin-bottom: 15px; } */
 
-.section-text {
+/* .section-text {
   font-size: var(--fs-5);
   line-height: 1.8;
   margin-bottom: 30px;
@@ -223,15 +226,15 @@
   transition: var(--transition);
 }
 
-.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); } */
 
-.social-list {
+/* .social-list {
   display: flex;
   align-items: center;
   gap: 20px;
-}
+} */
 
-.footer-list:not(:last-child) { margin-bottom: 50px; }
+/* .footer-list:not(:last-child) { margin-bottom: 50px; } */
 
 .footer-list-title {
   font-family: var(--ff-poppins);
@@ -264,17 +267,14 @@
 
 
 /* MEDIA QUERIES */
-@media (min-width: 600px) {
-  /**
-   * FOOTER
-   */
+/* @media (min-width: 600px) {
 
    .footer-link-box {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
-}
+} */
 
 
 @media (min-width: 768px) {
@@ -302,7 +302,7 @@
     margin-bottom: 0;
   }
 
-  .footer-link-box { flex-basis: 550px; }
+  /* .footer-link-box { flex-basis: 550px; } */
 
 }
 
