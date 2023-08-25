@@ -1,322 +1,110 @@
 ---
-import FooterBrand from './footer-elements/FooterBrand.astro';
-import LinkBox from './footer-elements/LinkBox.astro';
+import FooterBrand from "./footer-elements/FooterBrand.astro";
+import LinkBox from "./footer-elements/LinkBox.astro";
 ---
 
 <footer class="footer">
   <div class="footer-top">
     <div class="container">
-
       <FooterBrand />
-      <!-- <div class="footer-brand">
-        <a href="#" class="logo">
-          <img src="./imgs/logo-light.png" alt="Homeverse logo" />
-        </a>
-
-        <p class="section-text">
-          Lorem Ipsum is simply dummy text of the and typesetting industry.
-          Lorem Ipsum is dummy text of the printing.
-        </p>
-
-        <ul class="contact-list">
-          <li>
-            <a href="#" class="contact-link">
-              <ion-icon name="location-outline"></ion-icon>
-
-              <address>Brooklyn, New York, United States</address>
-            </a>
-          </li>
-
-          <li>
-            <a href="tel:+0123456789" class="contact-link">
-              <ion-icon name="call-outline"></ion-icon>
-
-              <span>+0123-456789</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:contact@homeverse.com" class="contact-link">
-              <ion-icon name="mail-outline"></ion-icon>
-
-              <span>contact@homeverse.com</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="social-list">
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div> -->
-
 
       <LinkBox />
-      <!-- <div class="footer-link-box">
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Company</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">About</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Blog</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">All Products</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Locations Map</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Contact us</a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Order tracking</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Wish List</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Login</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">My account</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Terms & Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Promotional Offers</a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Customer Care</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Login</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">My account</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Wish List</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Order tracking</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Contact us</a>
-          </li>
-        </ul>
-      </div> -->
     </div>
   </div>
 
   <div class="footer-bottom">
     <div class="container">
       <p class="copyright">
-        &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+        &copy; codewithsadee | <a
+          href="https://github.com/codewithsadee/homeverse/tree/master"
+          target="_blank">Original Code</a
+        > | <a href="https://codewithsadee.github.io/homeverse/" target="_blank"
+          >Live Site</a
+        >
       </p>
     </div>
   </div>
 </footer>
 
 <style>
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-.footer {
-  background: var(--raisin-black-1);
-  color: var(--white);
-  margin-bottom: 68px;
-}
-
-.footer .container { padding-inline: 30px; }
-
-.footer a { color: inherit; }
-
-.footer-top {
-  padding-top: 80px;
-  padding-bottom: 40px;
-}
-
-/* .footer-brand { margin-bottom: 70px; }
-
-.footer-brand .logo { margin-bottom: 15px; } */
-
-/* .section-text {
-  font-size: var(--fs-5);
-  line-height: 1.8;
-  margin-bottom: 30px;
-  max-width: 45ch;
-}
-
-.contact-list {
-  display: grid;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.contact-link {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.contact-link ion-icon { font-size: 18px; }
-
-.contact-link :is(address, span) {
-  font-size: var(--fs-5);
-  transition: var(--transition);
-}
-
-.contact-link:is(:hover, :focus) span { color: var(--orange-soda); } */
-
-/* .social-list {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-} */
-
-/* .footer-list:not(:last-child) { margin-bottom: 50px; } */
-
-.footer-list-title {
-  font-family: var(--ff-poppins);
-  font-size: var(--fs-3);
-  font-weight: var(--fw-700);
-  margin-bottom: 15px;
-}
-
-.footer-link {
-  font-size: var(--fs-5);
-  padding-block: 10px;
-}
-
-.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
-
-.footer-bottom {
-  background: var(--raisin-black-2);
-  padding-block: 25px;
-}
-
-.copyright {
-  font-size: var(--fs-5);
-  text-align: center;
-}
-
-.copyright a { display: inline-block; }
-
-.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
-
-
-
-/* MEDIA QUERIES */
-/* @media (min-width: 600px) {
-
-   .footer-link-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-} */
-
-
-@media (min-width: 768px) {
-  /**
-   * FOOTER
-   */
-
-   .footer { margin-bottom: 0; }
-}
-
-
-
-@media (min-width: 992px) {
-/**
-   * FOOTER
-   */
-
-   .footer-top .container {
-    display: flex;
-    justify-content: space-between;
+  .footer {
+    background: var(--raisin-black-1);
+    color: var(--white);
+    margin-bottom: 68px;
   }
 
-  .footer-brand {
-    max-width: 300px;
-    margin-bottom: 0;
+  .footer .container {
+    padding-inline: 30px;
   }
 
-  /* .footer-link-box { flex-basis: 550px; } */
+  .footer a {
+    color: inherit;
+  }
 
-}
+  .footer-top {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 
+  .footer-list-title {
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+    margin-bottom: 15px;
+  }
 
+  .footer-link {
+    font-size: var(--fs-5);
+    padding-block: 10px;
+  }
 
-@media (min-width: 1200px) {
-  /**
-   * FOOTER
-   */
+  .footer-link:is(:hover, :focus) {
+    color: var(--orange-soda);
+  }
 
-   .footer { --fs-5: 1rem; }
+  .footer-bottom {
+    background: var(--raisin-black-2);
+    padding-block: 25px;
+  }
 
-.footer-link-box { flex-basis: 700px; }
-}
+  .copyright {
+    font-size: var(--fs-5);
+    text-align: center;
+  }
 
+  .copyright a {
+    display: inline-block;
+  }
 
+  .copyright a:is(:hover, :focus) {
+    color: var(--orange-soda);
+  }
+
+  @media (min-width: 768px) {
+    .footer {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .footer-top .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      max-width: 300px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .footer {
+      --fs-5: 1rem;
+    }
+
+    .footer-link-box {
+      flex-basis: 700px;
+    }
+  }
 </style>

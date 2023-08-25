@@ -1,14 +1,17 @@
 ---
 const cards = [
     {
+        icon: './imgs/service-1.png',
         title: 'Buy a home',
         text: 'over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.'
     },
     {
+        icon: './imgs/service-2.png',
         title: 'Rent a home',
         text: 'homes for rent available on the website, we can match you with a house you will want to call home.'
     },
     {
+        icon: './imgs/service-3.png',
         title: 'Sell a home',
         text: 'Sale available on the website, we can match you with a house you make profit when selling.'
     }
@@ -18,7 +21,7 @@ const cards = [
     <li>
         <div class="service-card">
           <div class="card-icon">
-            <img src="./imgs/service-1.png" alt="Service icon" />
+            <img src={card.icon} alt="Service icon" />
           </div>
     
           <h3 class="h3 card-title">

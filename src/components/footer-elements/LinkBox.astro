@@ -1,182 +1,126 @@
 ---
 const companyList = [
-    { link: 'About' },
-    { link: 'Blog' },
-    { link: 'All Products' },
-    { link: 'Locations Map' },
-    { link: 'Locations Map' },
-    { link: 'FAQ' },
-    { link: 'Contact us' }
-]
+  { link: "About" },
+  { link: "Blog" },
+  { link: "All Products" },
+  { link: "Locations Map" },
+  { link: "Locations Map" },
+  { link: "FAQ" },
+  { link: "Contact us" },
+];
 
 const servicesList = [
-    { link: 'Order tracking' },
-    { link: 'Wish List' },
-    { link: 'Login' },
-    { link: 'My account' },
-    { link: 'Terms & Conditions' },
-    { link: 'Promotional Offers' }
-]
+  { link: "Order tracking" },
+  { link: "Wish List" },
+  { link: "Login" },
+  { link: "My account" },
+  { link: "Terms & Conditions" },
+  { link: "Promotional Offers" },
+];
 
 const customerList = [
-    { link: 'Login' },
-    { link: 'My account' },
-    { link: 'Wish List' },
-    { link: 'Order tracking' },
-    { link: 'FAQ' },
-    { link: 'Contact us' }
-]
+  { link: "Login" },
+  { link: "My account" },
+  { link: "Wish List" },
+  { link: "Order tracking" },
+  { link: "FAQ" },
+  { link: "Contact us" },
+];
 ---
 
 <div class="footer-link-box">
-    <ul class="footer-list">
-      <li>
-        <p class="footer-list-title">Company</p>
-      </li>
-      
-      {companyList.map(item => (
+  <ul class="footer-list">
+    <li>
+      <p class="footer-list-title">Company</p>
+    </li>
+
+    {
+      companyList.map((item) => (
         <li>
-            <a href="#" class="footer-link">{item.link}</a>
+          <a href="#" class="footer-link">
+            {item.link}
+          </a>
         </li>
+      ))
+    }
+  </ul>
 
-        // <li>
-        //     <a href="#" class="footer-link">Blog</a>
-        // </li>
+  <ul class="footer-list">
+    <li>
+      <p class="footer-list-title">Services</p>
+    </li>
 
-        // <li>
-        //     <a href="#" class="footer-link">All Products</a>
-        // </li>
-
-        // <li>
-        //     <a href="#" class="footer-link">Locations Map</a>
-        // </li>
-
-        // <li>
-        //     <a href="#" class="footer-link">FAQ</a>
-        // </li>
-
-        // <li>
-        //     <a href="#" class="footer-link">Contact us</a>
-        // </li>
-      ))}
-
-      
-    </ul>
-
-    <ul class="footer-list">
-      <li>
-        <p class="footer-list-title">Services</p>
-      </li>
-
-      {servicesList.map(item => (
+    {
+      servicesList.map((item) => (
         <li>
-            <a href="#" class="footer-link">{item.link}</a>
+          <a href="#" class="footer-link">
+            {item.link}
+          </a>
         </li>
-        ))}
+      ))
+    }
+  </ul>
 
-      <!-- <li>
-        <a href="#" class="footer-link">Order tracking</a>
-      </li>
+  <ul class="footer-list">
+    <li>
+      <p class="footer-list-title">Customer Care</p>
+    </li>
 
-      <li>
-        <a href="#" class="footer-link">Wish List</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Login</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">My account</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Terms & Conditions</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Promotional Offers</a>
-      </li> -->
-    </ul>
-
-    <ul class="footer-list">
-      <li>
-        <p class="footer-list-title">Customer Care</p>
-      </li>
-
-      {customerList.map(item => (
+    {
+      customerList.map((item) => (
         <li>
-            <a href="#" class="footer-link">{item.link}</a>
+          <a href="#" class="footer-link">
+            {item.link}
+          </a>
         </li>
-        ))}
+      ))
+    }
+  </ul>
+</div>
 
-      <!-- <li>
-        <a href="#" class="footer-link">Login</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">My account</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Wish List</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Order tracking</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">FAQ</a>
-      </li>
-
-      <li>
-        <a href="#" class="footer-link">Contact us</a>
-      </li> -->
-    </ul>
-  </div>
-
-  <style>
-
-.footer-list:not(:last-child) { margin-bottom: 50px; }
-
-.footer-list-title {
-  font-family: var(--ff-poppins);
-  font-size: var(--fs-3);
-  font-weight: var(--fw-700);
-  margin-bottom: 15px;
-}
-
-a {
-    color: inherit;
-}
-
-.footer-link {
-  font-size: var(--fs-5);
-  padding-block: 10px;
-}
-
-.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
-
-/* MEDIA QUERIES */
-@media (min-width: 600px) {
-  /**
-   * FOOTER
-   */
-
-   .footer-link-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+<style>
+  .footer-list:not(:last-child) {
+    margin-bottom: 50px;
   }
-}
 
-@media (min-width: 992px) {
-  .footer-link-box { flex-basis: 550px; }
-}
+  .footer-list-title {
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+    margin-bottom: 15px;
+  }
 
-@media (min-width: 1200px) {
+  a {
+    color: inherit;
+  }
 
-.footer-link-box { flex-basis: 700px; }
-}
+  .footer-link {
+    font-size: var(--fs-5);
+    padding-block: 10px;
+  }
+
+  .footer-link:is(:hover, :focus) {
+    color: var(--orange-soda);
+  }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 600px) {
+    .footer-link-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .footer-link-box {
+      flex-basis: 550px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .footer-link-box {
+      flex-basis: 700px;
+    }
+  }
 </style>

@@ -1,159 +1,43 @@
 ---
-import FeatureCard from './feature-elements/FeatureCard.astro';
+import FeatureCard from "./feature-elements/FeatureCard.astro";
 ---
 
 <section class="features">
-    <div class="container">
-      <p class="section-subtitle">Our Aminities</p>
+  <div class="container">
+    <p class="section-subtitle">Our Aminities</p>
 
-      <h2 class="h2 section-title">Building Aminities</h2>
+    <h2 class="h2 section-title">Building Aminities</h2>
 
-      <ul class="features-list">
+    <ul class="features-list">
 
-        <FeatureCard />
+      <FeatureCard />
+      
+    </ul>
+  </div>
+</section>
 
-        <!-- <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="car-sport-outline"></ion-icon>
-            </div>
+<style>
+  .features {
+    background: var(--cultured-2);
+    padding-block: var(--section-padding);
+  }
 
-            <h3 class="card-title">Parking Space</h3>
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 20px;
+  }
 
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li> -->
+  .features-list > li {
+    width: calc(50% - 10px);
+  }
 
-        <!-- <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="water-outline"></ion-icon>
-            </div>
+  .features-list {
+    column-gap: 30px;
+  }
 
-            <h3 class="card-title">Swimming Pool</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="shield-checkmark-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">Private Security</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="fitness-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">Medical Center</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="library-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">Library Area</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="bed-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">King Size Beds</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="home-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">Smart Homes</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="features-card">
-            <div class="card-icon">
-              <ion-icon name="football-outline"></ion-icon>
-            </div>
-
-            <h3 class="card-title">Kid’s Playland</h3>
-
-            <div class="card-btn">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </li> -->
-      </ul>
-    </div>
-  </section>
-
-  <style>
-.features {
-  background: var(--cultured-2);
-  padding-block: var(--section-padding);
-}
-
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px 20px;
-}
-
-.features-list > li { width: calc(50% - 10px); }
-/* li { width: calc(50% - 10px); }
-
-@media (min-width: 768px) {
-li { width: calc(33.33% - 13.33px); }
-}
-
-@media (min-width: 992px) {
-  /* .features-list { column-gap: 30px; } */ */
-
-  /* li { width: calc(25% - 30px); } */
-
-  .features-list { column-gap: 30px; }
-
-.features-list > li { width: calc(25% - 30px); }
-}
-    </style>
+  .features-list > li {
+    width: calc(25% - 30px);
+  }
+</style>

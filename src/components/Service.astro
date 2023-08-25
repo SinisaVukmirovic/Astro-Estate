@@ -1,0 +1,31 @@
+---
+import ServiceCard from "./service-elements/ServiceCard.astro";
+---
+
+<section class="service" id="service">
+  <div class="container">
+    <p class="section-subtitle">Our Services</p>
+
+    <h2 class="h2 section-title">Our Main Focus</h2>
+
+    <ul class="service-list">
+
+      <ServiceCard />
+      
+    </ul>
+  </div>
+</section>
+
+<style>
+  .service {
+    background: var(--cultured-2);
+    padding-block: var(--section-padding);
+  }
+
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+</style>

@@ -1,355 +1,224 @@
 ---
-import HeaderTop from './header-elements/HeaderTop.astro';
-// import Nav from './header-elements/Nav.astro';
-import Nav from './header-elements/Nav.astro';
+import HeaderTop from "./header-elements/HeaderTop.astro";
+import Nav from "./header-elements/Nav.astro";
 
-import logoImg from '/imgs/logo.png';
-// import SocialLink from './SocialLink.astro';
-// const navLinks = [
-//   {
-//     name: 'Home',
-//     url: '#home'
-//   },
-//   {
-//     name: 'About',
-//     url: '#about'
-//   },
-//   {
-//     name: 'Service',
-//     url: '#service'
-//   },
-//   {
-//     name: 'Property',
-//     url: '#property'
-//   },
-//   {
-//     name: 'Blog',
-//     url: '#blog'
-//   },
-//   {
-//     name: 'Contact',
-//     url: '#contact'
-//   }
-// ];
-
-// const socialLinks = [
-//   {
-//     name: 'logo-facebook'
-//   },
-//   {
-//     name: 'logo-twitter'
-//   },
-//   {
-//     name: 'logo-instagram'
-//   },
-//   {
-//     name: 'logo-pinterest'
-//   }
-// ];
+import logoImg from "/imgs/logo.png";
 ---
 
 <header class="header" data-header>
+  <div class="overlay" data-overlay></div>
 
-    <div class="overlay" data-overlay></div>
+  <HeaderTop />
 
-    <HeaderTop />
+  <div class="header-bottom">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src={logoImg} alt="Homeverse logo" />
+      </a>
 
-    <div class="header-bottom">
-      <div class="container">
+      <Nav />
 
-        <a href="#" class="logo">
-          <img src={logoImg} alt="Homeverse logo">
-        </a>
+      <div class="header-bottom-actions">
+        <button class="header-bottom-actions-btn" aria-label="Search">
+          <ion-icon name="search-outline"></ion-icon>
 
-        <Nav />
+          <span>Search</span>
+        </button>
 
-        <div class="header-bottom-actions">
+        <button class="header-bottom-actions-btn" aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon>
 
-          <button class="header-bottom-actions-btn" aria-label="Search">
-            <ion-icon name="search-outline"></ion-icon>
+          <span>Profile</span>
+        </button>
 
-            <span>Search</span>
-          </button>
+        <button class="header-bottom-actions-btn" aria-label="Cart">
+          <ion-icon name="cart-outline"></ion-icon>
 
-          <button class="header-bottom-actions-btn" aria-label="Profile">
-            <ion-icon name="person-outline"></ion-icon>
+          <span>Cart</span>
+        </button>
 
-            <span>Profile</span>
-          </button>
+        <button
+          class="header-bottom-actions-btn"
+          data-nav-open-btn
+          aria-label="Open Menu"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
 
-          <button class="header-bottom-actions-btn" aria-label="Cart">
-            <ion-icon name="cart-outline"></ion-icon>
-
-            <span>Cart</span>
-          </button>
-
-          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
-            <ion-icon name="menu-outline"></ion-icon>
-
-            <span>Menu</span>
-          </button>
-
-        </div>
-
+          <span>Menu</span>
+        </button>
       </div>
     </div>
-
-  </header>
+  </div>
+</header>
 
 <style>
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+  .header {
+    position: relative;
+    z-index: 2;
+  }
 
-.header {
-  position: relative;
-  z-index: 2;
-}
+  .header-bottom {
+    background: var(--white);
+    padding-block: 25px;
+  }
 
+  .header-bottom .logo img {
+    margin-inline: auto;
+  }
 
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: hsla(0, 0%, 0%, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 4;
+  }
 
-.header-bottom {
-  background: var(--white);
-  padding-block: 25px;
-}
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-.header-bottom .logo img { margin-inline: auto; }
+  .header-bottom-actions {
+    background: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 15px 10px;
+    box-shadow: -2px 0 30px hsla(237, 71%, 52%, 0.2);
+    z-index: 3;
+  }
 
-/* .navbar {
-  background: var(--white);
-  position: fixed;
-  top: 0;
-  left: -310px;
-  max-width: 300px;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
-  z-index: 5;
-  padding: 60px 20px;
-  visibility: hidden;
-  transition: 0.15s ease-in;
-} */
+  .header-bottom-actions-btn ion-icon {
+    color: hsl(0, 0%, 10%);
+    font-size: 20px;
+    margin-inline: auto;
+    margin-bottom: 5px;
+    --ionicon-stroke-width: 40px;
+    transition: var(--transition);
+  }
 
-/* .navbar.active {
-  visibility: visible;
-  transform: translateX(310px);
-  transition: 0.25s ease-out;
-} */
+  .header-bottom-actions-btn:is(:hover, :focus) ion-icon {
+    color: var(--orange-soda);
+  }
 
-/* .navbar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--cultured-1);
-  margin-bottom: 25px;
-}
+  .header-bottom-actions-btn span {
+    color: var(--cadet);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+  }
 
-.navbar-top .logo img { width: 200px; } */
+  @media (min-width: 768px) {
+    .header-bottom-actions {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-/* .nav-close-btn ion-icon {
-  font-size: 20px;
-  --ionicon-stroke-width: 45px;
-  padding: 5px;
-} */
+    .header-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* .navbar-link {
-  color: var(--cadet);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-600);
-  text-transform: uppercase;
-  padding-block: 15px;
-}
+    .header-bottom-actions-btn ion-icon {
+      margin-bottom: 0;
+    }
 
-.navbar-link:is(:hover, :focus) { color: var(--orange-soda); } */
+    .header-bottom-actions-btn span {
+      display: none;
+    }
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: hsla(0, 0%, 0%, 0.7);
-  opacity: 0;
-  pointer-events: none;
-  transition: var(--transition);
-  z-index: 4;
-}
+    .header-bottom-actions-btn {
+      background: var(--white);
+      width: 50px;
+      height: 50px;
+      box-shadow: var(--shadow-2);
+    }
+  }
 
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
+  @media (min-width: 1200px) {
+    .header-bottom {
+      padding-block: 30px;
+    }
 
-.header-bottom-actions {
-  background: var(--white);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  padding-block: 15px 10px;
-  box-shadow: -2px 0 30px hsla(237, 71%, 52%, 0.2);
-  z-index: 3;
-}
+    .header-bottom-actions-btn:last-child,
+    .overlay {
+      display: none;
+    }
 
-.header-bottom-actions-btn ion-icon {
-  color: hsl(0, 0%, 10%);
-  font-size: 20px;
-  margin-inline: auto;
-  margin-bottom: 5px;
-  --ionicon-stroke-width: 40px;
-  transition: var(--transition);
-}
+    .header {
+      padding-bottom: 114px;
+    }
 
-.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+    .header-bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
 
-.header-bottom-actions-btn span {
-  color: var(--cadet);
-  font-family: var(--ff-poppins);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-500);
-}
-
-
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
-/**
-   * HEADER
-   */
-
-   /* .header-top { padding-block: 5px; }
-
-.header-top .wrapper { margin-left: auto; }
-
-.header-top-social-list { gap: 12px; } */
-
-/* .header-top-social-link { font-size: 1rem; } */
-
-/* .header-top-btn { padding: 10px 20px; } */
-
-.header-bottom-actions {
-  all: unset;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.header-bottom .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-bottom-actions-btn ion-icon { margin-bottom: 0; }
-
-.header-bottom-actions-btn span { display: none; }
-
-.header-bottom-actions-btn {
-  background: var(--white);
-  width: 50px;
-  height: 50px;
-  box-shadow: var(--shadow-2);
-}
-}
-
-
-@media (min-width: 992px) {
-    /**
-   * HEADER
-   */
-
-  /* .header-top-list,
-  .header-top .wrapper { gap: 30px; } */
-
-}
-
-
-@media (min-width: 1200px) {
-/**
-   * HEADER
-   */
-
-   .header-bottom { padding-block: 30px; }
-
-.header-bottom-actions-btn:last-child,
-/* .navbar-top, */
-.overlay { display: none; }
-
-/* .navbar,
-.navbar.active { all: unset; } */
-
-/* .navbar-list {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-} */
-
-/* .navbar-link {
-  color: var(--dark-jungle-green);
-  --fs-5: 1.125rem;
-  text-transform: capitalize;
-} */
-
-.header { padding-bottom: 114px; }
-
-.header-bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.header.active .header-bottom {
-  position: fixed;
-  bottom: auto;
-  top: -94px;
-  padding-block: 20px;
-  box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2);
-  animation: slideDown 0.25s ease-out forwards;
-}
-
-}
-
-
+    .header.active .header-bottom {
+      position: fixed;
+      bottom: auto;
+      top: -94px;
+      padding-block: 20px;
+      box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2);
+      animation: slideDown 0.25s ease-out forwards;
+    }
+  }
 </style>
 
 <script>
-    const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
-    /**
-     * navbar toggle
-     */
-    const navbar = document.querySelector("[data-navbar]");
-    const overlay = document.querySelector("[data-overlay]");
-    const navCloseBtn = document.querySelector("[data-nav-close-btn]");
-    const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-    const navbarLinks = document.querySelectorAll("[data-nav-link]");
+  const elemToggleFunc = function (elem) {
+    elem.classList.toggle("active");
+  };
+  /**
+   * navbar toggle
+   */
+  const navbar = document.querySelector("[data-navbar]");
+  const overlay = document.querySelector("[data-overlay]");
+  const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+  const navOpenBtn = document.querySelector("[data-nav-open-btn]");
+  const navbarLinks = document.querySelectorAll("[data-nav-link]");
 
-    const navElemArr = [overlay, navCloseBtn, navOpenBtn];
+  const navElemArr = [overlay, navCloseBtn, navOpenBtn];
 
-    /**
-     * close navbar when click on any navbar link
-     */
+  /**
+   * close navbar when click on any navbar link
+   */
 
-    for (let i = 0; i < navbarLinks.length; i++) { navElemArr.push(navbarLinks[i]); }
+  for (let i = 0; i < navbarLinks.length; i++) {
+    navElemArr.push(navbarLinks[i]);
+  }
 
-    /**
-     * addd event on all elements for toggling navbar
-     */
+  /**
+   * addd event on all elements for toggling navbar
+   */
 
-    for (let i = 0; i < navElemArr.length; i++) {
-        navElemArr[i].addEventListener("click", function () {
-            elemToggleFunc(navbar);
-            elemToggleFunc(overlay);
-        });
-    }
+  for (let i = 0; i < navElemArr.length; i++) {
+    navElemArr[i].addEventListener("click", function () {
+      elemToggleFunc(navbar);
+      elemToggleFunc(overlay);
+    });
+  }
 
-    /**
-     * header active state
-     */
+  /**
+   * header active state
+   */
 
-    const header = document.querySelector("[data-header]");
+  const header = document.querySelector("[data-header]");
 
-    window.addEventListener("scroll", function () {
-      window.scrollY >= 400 ? header.classList.add("active")
-        : header.classList.remove("active");
-    }); 
+  window.addEventListener("scroll", function () {
+    window.scrollY >= 400
+      ? header.classList.add("active")
+      : header.classList.remove("active");
+  });
 </script>

@@ -1,58 +1,41 @@
 ---
 const socialLinks = [
-    {
-        icon: 'logo-facebook'
-    },
-    {
-        icon: 'logo-twitter'
-    },
-    {
-        icon: 'logo-linkedin'
-    },
-    {
-        icon: 'logo-youtube'
-    },
-]
+  {
+    icon: "logo-facebook",
+  },
+  {
+    icon: "logo-twitter",
+  },
+  {
+    icon: "logo-linkedin",
+  },
+  {
+    icon: "logo-youtube",
+  },
+];
 ---
 
 <ul class="social-list">
-    {socialLinks.map(link => (
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name={link.icon}></ion-icon>
-          </a>
-        </li>
-    ))}
+  {
+    socialLinks.map((link) => (
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name={link.icon} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
 
-    <!-- <li>
-      <a href="#" class="social-link">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a>
-    </li>
+<style>
+  .social-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 
-    <li>
-      <a href="#" class="social-link">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-    </li>
-
-    <li>
-      <a href="#" class="social-link">
-        <ion-icon name="logo-youtube"></ion-icon>
-      </a>
-    </li> -->
-  </ul>
-
-  <style>
-.social-list {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-a {
+  a {
     text-decoration: none;
     color: inherit;
-}
-
+  }
 </style>
